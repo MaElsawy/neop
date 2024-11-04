@@ -26,9 +26,9 @@ module.exports = {
         // => @media (min-width: 1536px) { ... }
       },
       backgroundImage: {
-        'cube': "url('/assets/imgs/cube.svg'), url('/src/assets/imgs/cube.svg')",
-        'back': "url('/assets/imgs/back.svg'), url('/src/assets/imgs/back.svg')",
-        'blob':"url('/assets/imgs/blob.svg'), url('/src/assets/imgs/blob.svg')",
+        'cube': "url('/assets/imgs/cube.svg')",
+        'back': "url('/assets/imgs/back.svg')",
+        'blob':"url('/assets/imgs/blob.svg')",
       },
       fontFamily: {
         'primary': ['Quicksand'],

@@ -24,7 +24,7 @@
 
 </head>
 <body class="bg-white bg-back bg-right-top bg-no-repeat">
-    <div class="font-primary pt-[25px]">
+    <div class="font-primary pt-[25px] w-full">
         <div class="container flex justify-between">
             <div>
                 <img src="assets/imgs/logo.svg" alt="logo">
@@ -62,7 +62,7 @@
 
         </div>
 
-        <div class="bg-cube bg-no-repeat flex justify-between items-center h-[38rem]">
+        <div class="bg-cube bg-no-repeat flex justify-center items-center h-[38rem]">
             <div class="">
                 <h2 class="text-8xl ml-32 font-primary text-primary font-bold flex justify-start items-center w-80 mb-5 tracking-widest">
                     coffee
@@ -79,9 +79,9 @@
 
                 </div>
             </div>
-            <div class="md:overflow-hidden">
+            <div class="">
                 <div class="flex flex-row items-center justify-end">
-                    <div id="mainContainer" class="relative w-[45%] ml-5 bg-gradient-to-r from-primary to-quinary md:-right-14 rounded-full">
+                    <div id="mainContainer" class="relative w-[45%] ml-5 bg-gradient-to-r from-primary to-quinary -right-14 rounded-full">
                         <img id="mainImage" class="w-full transition-opacity duration-500 opacity-100" src="assets/imgs/Coffee Beans.svg">
                     </div>
                     <div class="absolute flex right-10 mb-72">
@@ -99,14 +99,14 @@
             </div>
         </div>
 
-        <marquee class="w-full" direction="right">
+        <marquee class="container w-full" direction="right">
             <div id="marquee" class="flex flex-row mt-[46px]">
                 <img src="assets/imgs/coffe-bens.svg">
                 <p class="ml-10 mr-10 text-quaternary">Coffee</p>
             </div>
         </marquee>
 
-        <div class="mt-[76px] mb-[200px]">
+        <div class="container mt-[76px] mb-[200px]">
             <div class="text-center">
                 <p class="font-normal text-xl text-secondary">Our products</p>
                 <h2 class="font-bold text-4xl text-secondary mt-2">Special to Try</h2>
@@ -119,7 +119,7 @@
                 <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Coffee</h2>
                 <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Coffee equipment</h2>
             </div>
-            <div class="m-auto mt-12 flex flex-row justify-around items-center">
+            <div class="m-auto mt-12 flex flex-row lg:flex-col justify-around items-center">
                 <div class="text-center mr-5">
                     <div class="bg-white border-[10px] border-l-0 border-t-0 rounded-[45px] border-primary">
                         <img class=" border-[10px] border-quaternary rounded-[35px] border-r-0 border-b-0 w-[300px] h-[300px]" src="assets/imgs/ph-1.svg">
@@ -195,11 +195,11 @@
             </div>
         </div>
         
-        <div class="flex flex-row">
+        <div class="flex flex-row justify-center">
             <div class="bg-blob bg-no-repeat h-[655px] -ml-[40px]">
                 <img src="assets/imgs/Group 44.svg">
             </div>
-            <div class="flex flex-col justify-center w-[50%] -ml-[100px]">
+            <div class="flex flex-col justify-center">
                 <h2 class="font-bold text-4xl text-secondary">Welcome to our shop</h2>
                 <p class="font-normal text-xl text-secondary">The coffee you, when you want it</p>
                 <div class="mt-[37px]">
@@ -255,32 +255,29 @@
         
         <div class="flex justify-end mr-[47px] -mb-[310px]"><img src="assets/imgs/footer.svg"></div>
 
-        <div class="flex flex-row justify-center items-center bg-gradient-to-l from-primary to-quinary pb-[60px] pt-[72px] font-secondary">
-            <div class="-ml-[270px]">
-                <div>
-                    <div class="flex flex-row">
-                        <div class="mr-[100px]">
-                            <p class="mb-[20px]"><a class="font-bold text-white text-xl tracking-[1px]" href="#">Menu</a></p>
-                            <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Get inspired</a></p>
-                            <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Our products</a></p>
-                            <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">For a better world</a></p>
-                            <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Contact</a></p>
-                            <p><a class="font-bold text-white opacity-50 text-sm " href="#">Blog</a></p>
-        
-                        </div>
-                        <div class="mr-[100px]">
-                            <h2 class="font-bold text-white text-xl tracking-[1px] ">Cafe Locatotion</h2>
-                            <p class="font-bold text-white opacity-50 text-sm mt-[20px]">lorem ipsum</p>
-                        </div>
-                        <div>
-                            <h2 class="font-bold text-white text-xl tracking-[1px] mb-[20px]">
-                                Contact 
-                            </h2>
-                            <p class="font-bold text-white opacity-50 text-sm w-[125px] mb-[18px]">
-                                Do you have a question? Send it to us!
-                            </p>
-                            <p class="font-bold text-white opacity-50 text-sm ">000000000</p>
-                        </div>
+        <div class="flex flex-row justify-start lg:justify-center items-center bg-gradient-to-l from-primary to-quinary pb-[60px] pt-[72px] font-secondary">
+            <div class="container md:-ml-[270px]">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="mr-[100px]">
+                        <p class="mb-[20px]"><a class="font-bold text-white text-xl tracking-[1px]" href="#">Menu</a></p>
+                        <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Get inspired</a></p>
+                        <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Our products</a></p>
+                        <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">For a better world</a></p>
+                        <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Contact</a></p>
+                        <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm " href="#">Blog</a></p>
+                    </div>
+                    <div class="mr-[100px]">
+                        <h2 class="font-bold text-white text-xl tracking-[1px] ">Cafe Locatotion</h2>
+                        <p class="font-bold text-white opacity-50 text-sm mt-[20px] mb-[20px]">lorem ipsum</p>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-white text-xl tracking-[1px] mb-[20px]">
+                            Contact 
+                        </h2>
+                        <p class="font-bold text-white opacity-50 text-sm w-[125px] mb-[18px]">
+                            Do you have a question? Send it to us!
+                        </p>
+                        <p class="font-bold text-white opacity-50 text-sm ">000000000</p>
                     </div>
                 </div>
                 <hr class="mt-[56px] mb-[29px] opacity-50">

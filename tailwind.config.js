@@ -21,8 +21,14 @@ module.exports = {
         // => @media (min-width: 768px) { ... }
         '2md': '850px',
         // => @media (min-width: 850px) { ... }
+        '3md': '970px',
+        // => @media (min-width: 970px) { ... }
+        '4md': '1050px',
+        // => @media (min-width: 1050px) { ... }
         'lg': '1024px',
         // => @media (min-width: 1024px) { ... }
+        '2lg': '1120px',
+        // => @media (min-width: 1120px) { ... }
         'xl': '1280px',
         // => @media (min-width: 1280px) { ... }
         '2xl': '1536px',

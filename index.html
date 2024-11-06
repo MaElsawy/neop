@@ -61,7 +61,7 @@
 
         </div>
 
-        <div class="bg-cube bg-no-repeat flex justify-center items-center h-[38rem]">
+        <div class="bg-cube bg-no-repeat lg:flex justify-center items-center h-auto">
             <div class="">
                 <h2 class="text-8xl ml-32 font-primary text-primary font-bold flex justify-start items-center w-80 mb-5 tracking-widest">
                     coffee
@@ -77,14 +77,15 @@
                     <img class="cursor-pointer ml-5 w-14 h-14" src="assets/imgs/shop-bag.svg">
 
                 </div>
-            </div><div class="relative">
-                <div class="flex items-center justify-end overflow-hidden">
+            </div>
+            <div class="">
+                <div class="flex items-center lg:justify-end justify-center overflow-hidden mt-5 mb-5">
 
-                    <div id="mainContainer" class="relative w-[45%] ml-20 bg-gradient-to-r from-primary to-quinary rounded-full overflow-hidden">
+                    <div id="mainContainer" class="relative lg:w-[45%] w-[60%] ml-20 bg-gradient-to-r from-primary to-quinary rounded-full overflow-hidden">
                         <img id="mainImage" class="w-full transition-transform duration-[2500ms] ease-in-out" src="assets/imgs/Coffee Beans.svg">
                     </div>
                     
-                    <div class="absolute flex right-10 mb-64">
+                    <div class="lg:absolute flex right-10 mb-64">
                         <button id="prevButton" class="border-[1px] mr-5 rounded-full p-2 border-secondary hover:bg-primary hover:border-none">
                             <img src="assets/imgs/left.svg">
                         </button>
@@ -93,12 +94,11 @@
                         </button>
                     </div>
                     
-                    <div id="secondaryContainer" class="relative w-[15%] ml-8 -mr-16 bg-gradient-to-r from-quaternary to-secondary rounded-full overflow-hidden">
+                    <div id="secondaryContainer" class="relative lg:w-[15%]  w-[20%] ml-8 lg:-mr-16 -mr-40 bg-gradient-to-r from-quaternary to-secondary rounded-full overflow-hidden">
                         <img id="secondaryImage" class="w-full transition-transform duration-[2500ms] ease-in-out" src="assets/imgs/cup of coffee.png" alt="Coffee">
                     </div>
                 </div>
-            </div>
-                        
+            </div>        
         </div>
 
         <marquee class="w-full" direction="right">
@@ -156,56 +156,55 @@
             </div>
         </div>
         
-        <div class="flex flex-row justify-center">
-            <div class="bg-blob bg-no-repeat h-[655px] -ml-[40px]">
-                <img src="assets/imgs/Group 44.svg">
+        <div class="flex flex-col 2lg:flex-row justify-around">
+            <div class="bg-blob bg-no-repeat h-[655px] w-full flex">
+                <img class="2lg:-ml-[110px] h-auto w-full" src="assets/imgs/group3.png">
             </div>
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center text-center 2lg:text-left">
                 <h2 class="font-bold text-4xl text-secondary">Welcome to our shop</h2>
                 <p class="font-normal text-xl text-secondary">The coffee you, when you want it</p>
-                <div class="mt-[37px]">
-                    <div class="flex flex-row justify-center items-center mb-[24px]">
-                        <div class="flex mr-[28px]">
+                <div class="mt-[37px] mr-14">
+                    <div class="flex flex-col 2lg:flex-row justify-center items-center 2lg:mb-[24px]">
+                        <div class="flex 2lg:mr-[28px] mb-5 2lg:mb-0">
                             <div class="mr-[11px]">
                                 <img src="assets/imgs/quality.svg">
                             </div>
-                            <div class="w-[257px]">
+                            <div class="w-[310px]">
                                 <h2 class="text-primary text-xl font-bold">quality</h2>
                                 <p class="text-tertiary text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
-                        <div class="flex">
+                        <div class="flex mb-5 2lg:mb-0">
                             <div class="mr-[11px]">
                                 <img src="assets/imgs/Easy.svg">
                             </div>
-                            <div class="w-[257px]">
+                            <div class="w-[310px]">
                                 <h2 class="text-primary text-xl font-bold">Easy</h2>
                                 <p class="text-tertiary text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row justify-center items-center">
-                        <div class="flex mr-[28px]">
+                    <div class="flex flex-col 2lg:flex-row justify-center items-center">
+                        <div class="flex 2lg:mr-[28px] mb-5 2lg:mb-0">
                             <div class="mr-[11px]">
                                 <img src="assets/imgs/taste.svg">
                             </div>
-                            <div class="w-[257px]">
+                            <div class="w-[310px]">
                                 <h2 class="text-primary text-xl font-bold">taste</h2>
                                 <p class="text-tertiary text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
-                        <div class="flex">
+                        <div class="flex mb-5 2lg:mb-0">
                             <div class="mr-[11px]">
                                 <img src="assets/imgs/quick.svg">
                             </div>
-                            <div class="w-[257px]">
+                            <div class="w-[310px]">
                                 <h2 class="text-primary text-xl font-bold">quick</h2>
                                 <p class="text-tertiary text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 

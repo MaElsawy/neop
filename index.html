@@ -6,10 +6,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Coffee Shop</title>
 
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
@@ -22,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/main.css">
+    
 </head>
 <body class="bg-white bg-back bg-right-top bg-no-repeat">
     <div class="font-primary pt-[25px] w-full">
@@ -37,25 +37,24 @@
                 </div>
 
                 <div>
-
                     <div>
-                        <img id="open-nav" onclick="openNav()" src="assets/imgs/open.svg" class="cursor-pointer">
+                        <img id="open-nav" onclick="openNav()" src="assets/imgs/open.svg" class="cursor-pointer ml-5 mt-[2px]">
                     </div>
-
-                    <div id="sidebar" class="fixed top-0 bg-white right-0 w-[40%] z-[999] backdrop:blur(10px) shadow-[-10px_0_10px_rgba(0,0,0,0.1)] hidden justify-center items-center">
-                        <nav class="opacity-80 w-full shadow-[3px_3px_5px_rgba(0,0,0,0.1)] pt-[20px] pb-[20px] pl-[10px] pr-[10px]">
-                            <ul class="flex justify-end items-center" id="nav">
-                                <img id="close-nav" onclick="closeNav()" src="assets/imgs/close.svg" class="cursor-pointer">
-                                <li class="text-center mt-[25px]"><a id="home" class="hover:text-secondary text-primary" href="#">Home</a></li>
-                                <li class="text-center mt-[25px]"><a id="home" class="text-secondary hover:text-primary" href="#">Get inspired</a></li>
-                                <li class="text-center mt-[25px]"><a id="home" class="text-secondary hover:text-primary" href="#">Our products</a></li>
-                                <li class="text-center mt-[25px]"><a id="home" class="text-secondary hover:text-primary" href="#">for a better world</a></li>
-                                <li class="text-center mt-[25px]"><a id="home" class="text-secondary hover:text-primary" href="#">contact</a></li>
-                                <li class="text-center mt-[25px]"><a id="home" class="text-secondary hover:text-primary" href="#">Blog</a></li>
+                    
+                    <div id="sidebar" class="fixed top-0 right-0 w-3/4 h-screen bg-gradient-to-l from-primary to-gray z-[999] backdrop-blur-md shadow-lg transform translate-x-full transition-transform duration-500">
+                        <nav class="opacity-80 w-full pt-5 pb-5 pl-2 pr-2">
+                            <img id="close-nav" onclick="closeNav()" src="assets/imgs/close.svg" class="cursor-pointer mb-4">
+                            <ul class="w-full h-screen flex flex-col justify-center items-center" id="nav">
+                                <li class="text-center mt-6"><a class="text-secondary hover:text-white text-3xl" href="#">Home</a></li>
+                                <li class="text-center mt-6"><a class="hover:text-secondary text-white text-3xl" href="#">Get inspired</a></li>
+                                <li class="text-center mt-6"><a class="hover:text-secondary text-white text-3xl" href="#">Our products</a></li>
+                                <li class="text-center mt-6"><a class="hover:text-secondary text-white text-3xl" href="#">For a better world</a></li>
+                                <li class="text-center mt-6"><a class="hover:text-secondary text-white text-3xl" href="#">Contact</a></li>
+                                <li class="text-center mt-6"><a class="hover:text-secondary text-white text-3xl" href="#">Blog</a></li>
                             </ul>
                         </nav>
                     </div>
-
+                                        
                 </div>
 
             </div>
@@ -78,13 +77,15 @@
                     <img class="cursor-pointer ml-5 w-14 h-14" src="assets/imgs/shop-bag.svg">
 
                 </div>
-            </div>
-            <div class="">
-                <div class="flex flex-row items-center justify-end">
-                    <div id="mainContainer" class="relative w-[45%] ml-5 bg-gradient-to-r from-primary to-quinary -right-14 rounded-full">
-                        <img id="mainImage" class="w-full transition-opacity duration-500 opacity-100" src="assets/imgs/Coffee Beans.svg">
+            </div><div class="relative">
+                <div class="flex items-center justify-end overflow-hidden">
+                    <!-- الحاوية الرئيسية للصورة الأولى -->
+                    <div id="mainContainer" class="relative w-[45%] ml-20 bg-gradient-to-r from-primary to-quinary rounded-full overflow-hidden">
+                        <img id="mainImage" class="w-full transition-transform duration-[2500ms] ease-in-out" src="assets/imgs/Coffee Beans.svg">
                     </div>
-                    <div class="absolute flex right-10 mb-72">
+                    
+                    <!-- الأزرار للتبديل -->
+                    <div class="absolute flex right-10 mb-64">
                         <button id="prevButton" class="border-[1px] mr-5 rounded-full p-2 border-secondary hover:bg-primary hover:border-none">
                             <img src="assets/imgs/left.svg">
                         </button>
@@ -92,14 +93,17 @@
                             <img src="assets/imgs/right.svg">
                         </button>
                     </div>
-                    <div id="secondaryContainer" class="md:relative w-[15%] md:ml-8 bg-gradient-to-r from-quaternary to-secondary rounded-full xs:ml-6  lg:-right-[90px]">
-                        <img id="secondaryImage" class="w-full transition-opacity duration-500 opacity-100" src="assets/imgs/cup of coffee.png" alt="Coffee">
+                    
+                    <!-- الحاوية الثانوية للصورة الثانية -->
+                    <div id="secondaryContainer" class="relative w-[15%] ml-8 -mr-16 bg-gradient-to-r from-quaternary to-secondary rounded-full overflow-hidden">
+                        <img id="secondaryImage" class="w-full transition-transform duration-[2500ms] ease-in-out" src="assets/imgs/cup of coffee.png" alt="Coffee">
                     </div>
                 </div>
             </div>
+                        
         </div>
 
-        <marquee class="container w-full" direction="right">
+        <marquee class="w-full" direction="right">
             <div id="marquee" class="flex flex-row mt-[46px]">
                 <img src="assets/imgs/coffe-bens.svg">
                 <p class="ml-10 mr-10 text-quaternary">Coffee</p>
@@ -111,16 +115,16 @@
                 <p class="font-normal text-xl text-secondary">Our products</p>
                 <h2 class="font-bold text-4xl text-secondary mt-2">Special to Try</h2>
             </div>
-            <div class="flex justify-center items-center mt-8 mb-20">
-                <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto text-primary border-b-2 border-primary text-xl cursor-pointer">All categories</h2>
-                <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Special offers</h2>
-                <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Best seller</h2>
-                <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Roasting</h2>
-                <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Coffee</h2>
-                <h2 class="pl-12 pr-12 mr-1 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer">Coffee equipment</h2>
+            <div class="flex justify-center items-center mt-8 mb-20 ">
+                <h2 class=" mr-16 pb-3 w-auto text-primary border-b-2 border-primary text-xl cursor-pointer" onclick="showAll()">All categories</h2>
+                <h2 class=" mr-16 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer" onclick="showSpecial()">Special offers</h2>
+                <h2 class=" mr-16 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer" onclick="showBest()">Best seller</h2>
+                <h2 class=" mr-16 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer" onclick="showRoasting()">Roasting</h2>
+                <h2 class=" mr-16 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer" onclick="showCoffee()">Coffee</h2>
+                <h2 class=" mr-16 pb-3 w-auto hover:text-primary hover:border-b-2 border-primary text-secondary text-xl cursor-pointer" onclick="showEquipment()">Coffee equipment</h2>
             </div>
-            <div class="m-auto mt-12 flex flex-row lg:flex-col justify-around items-center">
-                <div class="text-center mr-5">
+            <div class="m-auto mt-12 flex flex-col lg:flex-row flex-wrap justify-center items-center">
+                <div class="text-center mr-6 mb-3">
                     <div class="bg-white border-[10px] border-l-0 border-t-0 rounded-[45px] border-primary">
                         <img class=" border-[10px] border-quaternary rounded-[35px] border-r-0 border-b-0 w-[300px] h-[300px]" src="assets/imgs/ph-1.svg">
                     </div>
@@ -138,7 +142,7 @@
                         <img class="mt-3" src="assets/imgs/Star 1.svg">
                     </div>
                 </div>
-                <div class="text-center mr-5">
+                <div class="text-center mr-6 mb-3">
                     <div class=" bg-white border-[10px] border-l-0 border-t-0 rounded-[45px] border-primary">
                         <img class=" border-[10px] border-quaternary rounded-[35px] border-r-0 border-b-0 w-[300px] h-[300px]" src="assets/imgs/ph-2.svg">
                     </div>
@@ -156,7 +160,7 @@
                         <img class="mt-3" src="assets/imgs/Star 1.svg">
                     </div>
                 </div>
-                <div class="text-center mr-5">
+                <div class="text-center mr-6 mb-3">
                     <div class=" bg-white border-[10px] border-l-0 border-t-0 rounded-[45px] border-primary">
                         <img class=" border-[10px] border-quaternary rounded-[35px] border-r-0 border-b-0 w-[300px] h-[300px]" src="assets/imgs/ph-3.svg">
                     </div>
@@ -255,9 +259,9 @@
         
         <div class="flex justify-end mr-[47px] -mb-[310px]"><img src="assets/imgs/footer.svg"></div>
 
-        <div class="flex flex-row justify-start lg:justify-center items-center bg-gradient-to-l from-primary to-quinary pb-[60px] pt-[72px] font-secondary">
-            <div class="container md:-ml-[270px]">
-                <div class="flex flex-col lg:flex-row">
+        <div class=" bg-gradient-to-l from-primary to-quinary pb-[60px] pt-[72px] font-secondary">
+            <div class="container">
+                <div class=" flex flex-col lg:flex-row flex-wrap justify-center -ml-[100px]">
                     <div class="mr-[100px]">
                         <p class="mb-[20px]"><a class="font-bold text-white text-xl tracking-[1px]" href="#">Menu</a></p>
                         <p class="mb-[18px]"><a class="font-bold text-white opacity-50 text-sm" href="#">Get inspired</a></p>
@@ -278,15 +282,6 @@
                             Do you have a question? Send it to us!
                         </p>
                         <p class="font-bold text-white opacity-50 text-sm ">000000000</p>
-                    </div>
-                </div>
-                <hr class="mt-[56px] mb-[29px] opacity-50">
-                <div>
-                    <h1 class="font-tertiary uppercase text-white opacity-50 text-xs">Privacy policy</h1>
-                    <div>
-                        <a href="#"><img src=""></a>
-                        <a href="#"><img src=""></a>
-                        <a href="#"><img src=""></a>
                     </div>
                 </div>
             </div>

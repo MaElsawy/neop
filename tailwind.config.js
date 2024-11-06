@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./*.html","./assets/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -10,6 +10,7 @@ module.exports = {
         'quaternary': '#6F4336',
         'quinary': '#1E71A6',
         'senary': '#8B8BA5',
+        'gray': '#004876',
       },
       screens: {
         'xs': '400px',

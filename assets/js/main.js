@@ -1,8 +1,12 @@
 let nav = document.getElementById('nav');
+  
+let mainImage = document.getElementById('mainImage');
 
-let openNavIcon = document.getElementById('open-nav');
+let secondaryImage = document.getElementById('secondaryImage');
 
-let closeNavIcon = document.getElementById('close-nav');
+let prevButton = document.getElementById('prevButton');
+
+let nextButton = document.getElementById('nextButton');
 
 let navItems = document.querySelectorAll('#nav li a');
 
@@ -12,37 +16,37 @@ let itemHTML = marqueeContainer.innerHTML;
 
 let repeatCount = 100;
 
+let openNavIcon = document.getElementById('open-nav');
+
+let closeNavIcon = document.getElementById('close-nav');
+
 let sideBar = document.getElementById('sidebar');
 
 
+function openNav() {
+  sideBar.classList.remove('translate-x-full');
 
-function openNav(){
-
-  nav.style.display = 'block';
-
-  openNavIcon.style.display = 'none';
-
-  closeNavIcon.style.display = 'block';
-
-  sideBar.style.display = 'flex';
-
-  navItems.forEach(item => item.classList.remove('hidden'));
+  sideBar.classList.add('translate-x-0');
+  
+  openNavIcon.classList.add('hidden');
+  
+  closeNavIcon.classList.remove('hidden');
 
 }
 
-function closeNav(){
 
-  nav.style.display = 'none';
+function closeNav() {
 
-  openNavIcon.style.display = 'block';
+  sideBar.classList.add('translate-x-full');
 
-  closeNavIcon.style.display = 'none';
+  sideBar.classList.remove('translate-x-0');
 
-  sideBar.style.display = 'none';
+  openNavIcon.classList.remove('hidden');
 
-  navItems.forEach(item => item.classList.add('hidden'));
+  closeNavIcon.classList.add('hidden');
 
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -63,55 +67,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-let mainImage = document.getElementById('mainImage');
-
-let secondaryImage = document.getElementById('secondaryImage');
-
-let prevButton = document.getElementById('prevButton');
-
-let nextButton = document.getElementById('nextButton');
-
 document.addEventListener('DOMContentLoaded', function() {
 
-  function switchImage() {
+function swapImages() {
 
-    mainImage.style.opacity = '0';
-
-    secondaryImage.style.opacity = '0';
-
+    mainImage.classList.add('translate-x-[100%]');
+      
+    secondaryImage.classList.add('-translate-x-[100%]');
 
     setTimeout(() => {
 
-      mainImage.style.display = 'none';
-
-      secondaryImage.style.display = 'none';
-
       let tempSrc = mainImage.src;
-
+      
       mainImage.src = secondaryImage.src;
-
+      
       secondaryImage.src = tempSrc;
 
-      mainImage.style.display = 'block';
-
-      secondaryImage.style.display = 'block';
-
-      setTimeout(() => {
-
-        mainImage.style.opacity = '1';
-
-        secondaryImage.style.opacity = '1';
-
-      }, 50);
       
-    }, 1000);
+      mainImage.classList.remove('translate-x-[100%]');
+      
+      secondaryImage.classList.remove('-translate-x-[100%]');
+    
+    }, 2500);
+  
   }
 
-  prevButton.onclick = switchImage;
+  prevButton.addEventListener('click', swapImages);
+  
+  nextButton.addEventListener('click', swapImages);
 
-  nextButton.onclick = switchImage;
 });
 
 

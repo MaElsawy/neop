@@ -1415,6 +1415,22 @@ video {
     flex-direction: row;
   }
 
+  .\32lg\:p-0 {
+    padding: 0px;
+  }
+
+  .\32lg\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .\32lg\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .\32lg\:pb-5 {
+    padding-bottom: 1.25rem;
+  }
+
   .\32lg\:text-left {
     text-align: left;
   }

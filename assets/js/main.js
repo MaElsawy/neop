@@ -175,7 +175,7 @@ function showAll() {
 
     updateProductsVisibility([ 'div-1','div-2','div-3','div-4']);
 
-  }, 2000);
+  }, 2500);
 
 }
 
@@ -193,7 +193,7 @@ function showSpecial() {
 
     updateProductsVisibility(['div-3']);
 
-  }, 2000);
+  }, 2500);
 
 }
 function showBest() {
@@ -210,7 +210,7 @@ function showBest() {
 
     updateProductsVisibility(['div-1']);
 
-  }, 2000);
+  }, 2500);
 }
 
 function showRoasting() {
@@ -227,7 +227,7 @@ function showRoasting() {
 
     updateProductsVisibility(['div-2', 'div-4']);
 
-  }, 2000);
+  }, 2500);
 
 }
 
@@ -245,7 +245,7 @@ function showCoffee() {
 
     updateProductsVisibility([ 'div-1','div-2','div-3','div-4']);
 
-  }, 2000);
+  }, 2500);
 
 }
 
@@ -263,7 +263,7 @@ function showEquipment() {
 
     updateProductsVisibility(['div-2','div-3','div-4']);
 
-  }, 2000);
+  }, 2500);
 
 }
 

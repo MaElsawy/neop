@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  const images = [
+  let images = [
+
     "assets/imgs/Coffee Beans.svg",
 
     "assets/imgs/cup of coffee.png",

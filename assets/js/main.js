@@ -22,6 +22,28 @@ let closeNavIcon = document.getElementById('close-nav');
 
 let sideBar = document.getElementById('sidebar');
 
+let div1 = document.getElementById('div-1');
+
+let div2 = document.getElementById('div-2');
+
+let div3 = document.getElementById('div-3');
+
+let div4 = document.getElementById('div-4');
+
+let all = document.getElementById('all');
+
+let special = document.getElementById('special');
+
+let best = document.getElementById('best');
+
+let roasting = document.getElementById('roasting');
+
+let coffee = document.getElementById('coffee');
+
+let equipment = document.getElementById('equipment');
+
+let products = document.querySelectorAll('#products > div');
+
 
 function openNav() {
 
@@ -135,29 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
-let div1 = document.getElementById('div-1');
-
-let div2 = document.getElementById('div-2');
-
-let div3 = document.getElementById('div-3');
-
-let div4 = document.getElementById('div-4');
-
-let all = document.getElementById('all');
-
-let special = document.getElementById('special');
-
-let best = document.getElementById('best');
-
-let roasting = document.getElementById('roasting');
-
-let coffee = document.getElementById('coffee');
-
-let equipment = document.getElementById('equipment');
-
-let products = document.querySelectorAll('#products > div');
-
 document.addEventListener("DOMContentLoaded", showAll);
 
 function showAll() {
@@ -229,7 +228,7 @@ function showRoasting() {
     updateProductsVisibility(['div-2', 'div-4']);
 
   }, 2000);
-  
+
 }
 
 function showCoffee() {
@@ -280,7 +279,6 @@ function setActive(element) {
 
   });
 
-  // إضافة البوردر تحت العنصر الذي تم النقر عليه
   element.classList.remove('scale-x-0');
 
   element.classList.add('scale-x-100');

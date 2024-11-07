@@ -680,10 +680,6 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.mb-32 {
-  margin-bottom: 8rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -698,6 +694,10 @@ video {
 
 .mb-\[20px\] {
   margin-bottom: 20px;
+}
+
+.mb-\[76px\] {
+  margin-bottom: 76px;
 }
 
 .ml-10 {
@@ -740,12 +740,8 @@ video {
   margin-right: 1.5rem;
 }
 
-.mr-\[100px\] {
-  margin-right: 100px;
-}
-
-.mr-\[104px\] {
-  margin-right: 104px;
+.mr-\[120px\] {
+  margin-right: 120px;
 }
 
 .mr-\[47px\] {
@@ -796,18 +792,6 @@ video {
   margin-top: 76px;
 }
 
-.mb-\[\] {
-  margin-bottom: ;
-}
-
-.mb-\[76px\] {
-  margin-bottom: 76px;
-}
-
-.mr-\[120px\] {
-  margin-right: 120px;
-}
-
 .block {
   display: block;
 }
@@ -818,6 +802,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-0 {
+  height: 0px;
 }
 
 .h-14 {
@@ -838,10 +826,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-0 {
-  height: 0px;
 }
 
 .w-1\/2 {
@@ -896,6 +880,10 @@ video {
   width: 100%;
 }
 
+.origin-left {
+  transform-origin: left;
+}
+
 .-translate-x-\[100\%\] {
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -918,6 +906,16 @@ video {
 
 .translate-x-full {
   --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-x-0 {
+  --tw-scale-x: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-x-100 {
+  --tw-scale-x: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1034,6 +1032,10 @@ video {
 .border-secondary {
   --tw-border-opacity: 1;
   border-color: rgb(59 47 47 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .bg-white {
@@ -1274,6 +1276,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -1290,12 +1296,22 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hover\:border-b-2:hover {
-  border-bottom-width: 2px;
+.hover\:scale-x-100:hover {
+  --tw-scale-x: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:border-none:hover {
   border-style: none;
+}
+
+.hover\:border-primary:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 72 118 / var(--tw-border-opacity));
+}
+
+.hover\:border-transparent:hover {
+  border-color: transparent;
 }
 
 .hover\:bg-primary:hover {
@@ -1303,9 +1319,9 @@ video {
   background-color: rgb(0 72 118 / var(--tw-bg-opacity));
 }
 
-.hover\:text-primary:hover {
+.hover\:text-secondary:hover {
   --tw-text-opacity: 1;
-  color: rgb(0 72 118 / var(--tw-text-opacity));
+  color: rgb(59 47 47 / var(--tw-text-opacity));
 }
 
 .hover\:text-sky-500:hover {
@@ -1335,28 +1351,12 @@ video {
     position: absolute;
   }
 
-  .lg\:-ml-\[100px\] {
-    margin-left: -100px;
+  .lg\:-ml-\[220px\] {
+    margin-left: -220px;
   }
 
   .lg\:-mr-16 {
     margin-right: -4rem;
-  }
-
-  .lg\:-ml-\[70px\] {
-    margin-left: -70px;
-  }
-
-  .lg\:-ml-\[120px\] {
-    margin-left: -120px;
-  }
-
-  .lg\:-ml-\[150px\] {
-    margin-left: -150px;
-  }
-
-  .lg\:-ml-\[220px\] {
-    margin-left: -220px;
   }
 
   .lg\:flex {
@@ -1409,6 +1409,10 @@ video {
     margin-right: 3.5rem;
   }
 
+  .\32lg\:mr-\[104px\] {
+    margin-right: 104px;
+  }
+
   .\32lg\:mr-\[11px\] {
     margin-right: 11px;
   }
@@ -1419,10 +1423,6 @@ video {
 
   .\32lg\:mt-0 {
     margin-top: 0px;
-  }
-
-  .\32lg\:mr-\[104px\] {
-    margin-right: 104px;
   }
 
   .\32lg\:h-\[655px\] {

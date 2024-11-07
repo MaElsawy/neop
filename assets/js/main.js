@@ -22,27 +22,6 @@ let closeNavIcon = document.getElementById('close-nav');
 
 let sideBar = document.getElementById('sidebar');
 
-let div1 = document.getElementById('div-1');
-
-let div2 = document.getElementById('div-2');
-
-let div3 = document.getElementById('div-3');
-
-let div4 = document.getElementById('div-4');
-
-let all = document.getElementById('all');
-
-let special = document.getElementById('special');
-
-let best = document.getElementById('best');
-
-let roasting = document.getElementById('roasting');
-
-let coffee = document.getElementById('coffee');
-
-let equipment = document.getElementById('equipment');
-
-let products = document.querySelectorAll('#products > div');
 
 function openNav() {
 
@@ -144,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       updateImages();
 
-    }, 1500);
+    },1500);
 
   }
 
@@ -155,6 +134,29 @@ document.addEventListener('DOMContentLoaded', function() {
   updateImages();
 
 });
+
+
+let div1 = document.getElementById('div-1');
+
+let div2 = document.getElementById('div-2');
+
+let div3 = document.getElementById('div-3');
+
+let div4 = document.getElementById('div-4');
+
+let all = document.getElementById('all');
+
+let special = document.getElementById('special');
+
+let best = document.getElementById('best');
+
+let roasting = document.getElementById('roasting');
+
+let coffee = document.getElementById('coffee');
+
+let equipment = document.getElementById('equipment');
+
+let products = document.querySelectorAll('#products > div');
 
 document.addEventListener("DOMContentLoaded", showAll);
 
@@ -169,38 +171,126 @@ function showAll() {
     product.style.display = 'block';
 
   });
+  
+  setTimeout(() => {
+
+    updateProductsVisibility([ 'div-1','div-2','div-3','div-4']);
+
+  }, 2000);
 
 }
 
 function showSpecial() {
 
-  updateProductsVisibility(['div-3']);
+  products.forEach(product => {
+
+    product.classList.add('opacity-0', 'translate-x-[-100%]');
+
+    product.classList.remove('opacity-100', 'translate-x-0');
+
+  });
+
+  setTimeout(() => {
+
+    updateProductsVisibility(['div-3']);
+
+  }, 2000);
 
 }
-
 function showBest() {
 
-  updateProductsVisibility(['div-1']);
+  products.forEach(product => {
 
+    product.classList.add('opacity-0', 'translate-x-[-100%]');
+
+    product.classList.remove('opacity-100', 'translate-x-0');
+
+  });
+
+  setTimeout(() => {
+
+    updateProductsVisibility(['div-1']);
+
+  }, 2000);
 }
 
 function showRoasting() {
 
-  updateProductsVisibility(['div-2', 'div-4']);
+  products.forEach(product => {
 
+    product.classList.add('opacity-0', 'translate-x-[-100%]');
+
+    product.classList.remove('opacity-100', 'translate-x-0');
+
+  });
+
+  setTimeout(() => {
+
+    updateProductsVisibility(['div-2', 'div-4']);
+
+  }, 2000);
+  
 }
 
 function showCoffee() {
 
-  updateProductsVisibility(['div-1', 'div-2', 'div-3', 'div-4']);
+  products.forEach(product => {
+
+    product.classList.add('opacity-0', 'translate-x-[-100%]');
+
+    product.classList.remove('opacity-100', 'translate-x-0');
+
+  });
+
+  setTimeout(() => {
+
+    updateProductsVisibility([ 'div-1','div-2','div-3','div-4']);
+
+  }, 2000);
 
 }
 
 function showEquipment() {
 
-  updateProductsVisibility(['div-1', 'div-2', 'div-3']);
+  products.forEach(product => {
+
+    product.classList.add('opacity-0', 'translate-x-[-100%]');
+
+    product.classList.remove('opacity-100', 'translate-x-0');
+
+  });
+
+  setTimeout(() => {
+
+    updateProductsVisibility(['div-2','div-3','div-4']);
+
+  }, 2000);
 
 }
+
+function setActive(element) {
+
+  let allCategories = document.querySelectorAll('.category');
+
+  allCategories.forEach(item => {
+
+    item.classList.remove('border-primary');
+
+    item.classList.add('border-transparent');
+
+  });
+
+  // إضافة البوردر تحت العنصر الذي تم النقر عليه
+  element.classList.remove('scale-x-0');
+
+  element.classList.add('scale-x-100');
+
+  element.classList.add('border-primary');
+
+  element.classList.remove('border-transparent');
+
+}
+
 
 function updateProductsVisibility(visibleIds) {
 
@@ -213,7 +303,6 @@ function updateProductsVisibility(visibleIds) {
     product.style.display = 'none';
 
   });
-
 
   visibleIds.forEach(id => {
 

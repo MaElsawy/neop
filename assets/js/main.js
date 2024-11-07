@@ -1,5 +1,5 @@
 let nav = document.getElementById('nav');
-  
+
 let mainImage = document.getElementById('mainImage');
 
 let secondaryImage = document.getElementById('secondaryImage');
@@ -45,12 +45,13 @@ let equipment = document.getElementById('equipment');
 let products = document.querySelectorAll('#products > div');
 
 function openNav() {
+
   sideBar.classList.remove('translate-x-full');
 
   sideBar.classList.add('translate-x-0');
-  
+
   openNavIcon.classList.add('hidden');
-  
+
   closeNavIcon.classList.remove('hidden');
 
 }
@@ -94,8 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
     "assets/imgs/js-1.png",
 
     "assets/imgs/js-2.png"
+
   ];
-  
+
   let currentIndex = 0;
 
   function updateImages() {
@@ -167,6 +169,7 @@ function showAll() {
     product.style.display = 'block';
 
   });
+
 }
 
 function showSpecial() {
@@ -225,4 +228,3 @@ function updateProductsVisibility(visibleIds) {
   });
 
 }
-

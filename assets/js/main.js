@@ -22,85 +22,6 @@ let closeNavIcon = document.getElementById('close-nav');
 
 let sideBar = document.getElementById('sidebar');
 
-
-function openNav() {
-  sideBar.classList.remove('translate-x-full');
-
-  sideBar.classList.add('translate-x-0');
-  
-  openNavIcon.classList.add('hidden');
-  
-  closeNavIcon.classList.remove('hidden');
-
-}
-
-
-function closeNav() {
-
-  sideBar.classList.add('translate-x-full');
-
-  sideBar.classList.remove('translate-x-0');
-
-  openNavIcon.classList.remove('hidden');
-
-  closeNavIcon.classList.add('hidden');
-
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  for (let i = 0; i < repeatCount; i++) {
-
-    marqueeContainer.innerHTML += itemHTML;
-
-  }
-
-  document.querySelectorAll('#marquee > div').forEach(item => {
-
-    item.classList.add('marquee-item');
-
-  });
-
-});
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-
-function swapImages() {
-
-
-  mainImage.classList.add('translate-x-[100%]');
-      
-  secondaryImage.classList.add('-translate-x-[100%]');
-
-  setTimeout(() => {
-
-    let tempSrc = mainImage.src;
-      
-    mainImage.src = secondaryImage.src;
-      
-    secondaryImage.src = tempSrc;
-  
-    mainImage.classList.remove('translate-x-[100%]');
-      
-    secondaryImage.classList.remove('-translate-x-[100%]');
-    
-    }, 2500);
-  
-  }
-
-  prevButton.addEventListener('click', swapImages);
-  
-  nextButton.addEventListener('click', swapImages);
-
-});
-
-
-
-
 let div1 = document.getElementById('div-1');
 
 let div2 = document.getElementById('div-2');
@@ -122,6 +43,115 @@ let coffee = document.getElementById('coffee');
 let equipment = document.getElementById('equipment');
 
 let products = document.querySelectorAll('#products > div');
+
+function openNav() {
+  sideBar.classList.remove('translate-x-full');
+
+  sideBar.classList.add('translate-x-0');
+  
+  openNavIcon.classList.add('hidden');
+  
+  closeNavIcon.classList.remove('hidden');
+
+}
+
+function closeNav() {
+
+  sideBar.classList.add('translate-x-full');
+
+  sideBar.classList.remove('translate-x-0');
+
+  openNavIcon.classList.remove('hidden');
+
+  closeNavIcon.classList.add('hidden');
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  for (let i = 0; i < repeatCount; i++) {
+
+    marqueeContainer.innerHTML += itemHTML;
+
+  }
+
+  document.querySelectorAll('#marquee > div').forEach(item => {
+
+    item.classList.add('marquee-item');
+
+  });
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const images = [
+    "assets/imgs/Coffee Beans.svg",
+
+    "assets/imgs/cup of coffee.png",
+
+    "assets/imgs/js-1.png",
+
+    "assets/imgs/js-2.png"
+  ];
+  
+  let currentIndex = 0;
+
+  function updateImages() {
+
+    mainImage.src = images[currentIndex];
+
+    secondaryImage.src = images[(currentIndex + 1) % images.length];
+
+  }
+
+  function nextImage() {
+
+    currentIndex = (currentIndex + 1) % images.length;
+
+    mainImage.classList.add('translate-x-[100%]');
+
+    secondaryImage.classList.add('-translate-x-[100%]');
+
+    setTimeout(() => {
+
+      mainImage.classList.remove('translate-x-[100%]');
+
+      secondaryImage.classList.remove('-translate-x-[100%]');
+
+      updateImages();
+
+    }, 1500);
+
+  }
+
+  function prevImage() {
+
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+    mainImage.classList.add('-translate-x-[100%]');
+
+    secondaryImage.classList.add('translate-x-[100%]');
+
+    setTimeout(() => {
+
+      mainImage.classList.remove('-translate-x-[100%]');
+
+      secondaryImage.classList.remove('translate-x-[100%]');
+
+      updateImages();
+
+    }, 1500);
+
+  }
+
+  prevButton.addEventListener('click', prevImage);
+
+  nextButton.addEventListener('click', nextImage);
+
+  updateImages();
+
+});
 
 document.addEventListener("DOMContentLoaded", showAll);
 

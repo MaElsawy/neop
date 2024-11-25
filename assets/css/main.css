@@ -796,6 +796,14 @@ video {
   margin-top: 76px;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -864,6 +872,10 @@ video {
   width: 203px;
 }
 
+.w-\[270\%\] {
+  width: 270%;
+}
+
 .w-\[300px\] {
   width: 300px;
 }
@@ -882,6 +894,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-9\/12 {
+  width: 75%;
 }
 
 .origin-left {
@@ -973,6 +989,18 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
 }
 
 .rounded-3xl {
@@ -1292,20 +1320,21 @@ video {
   transition-duration: 1500ms;
 }
 
-.duration-\[3000ms\] {
-  transition-duration: 3000ms;
-}
-
-.duration-\[000ms\] {
-  transition-duration: 000ms;
-}
-
 .duration-\[2500ms\] {
   transition-duration: 2500ms;
 }
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .hover\:scale-x-100:hover {
